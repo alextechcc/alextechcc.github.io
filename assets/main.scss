@@ -1,0 +1,111 @@
+---
+---
+@import "{{ site.theme }}";
+$grey-color: #626262;
+
+.carousel-container {
+    box-sizing:border-box;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carousel-slides {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.carousel-img {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.carousel-prev, .carousel-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.carousel-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+
+.carousel-txt {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.65);
+}
+
+.carousel-num-txt {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.carousel-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot-active, .carousel-dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.0s;
+    animation-name: fade;
+    animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+video {
+    padding: 15px;
+    font-size: 0;
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+}

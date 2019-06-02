@@ -1,0 +1,22 @@
+<div class="carousel-container" data-current="0" id="{{ include.id }}">
+  <div class="carousel-slides">
+    {% for image in include.images %}
+
+    <div class="fade {{ include.id }}-slide
+                {% if forloop.first == false %}hide{% endif %}">
+      <div class="carousel-num-txt">{{ forloop.index }} / {{ include.images | size }}</div>
+      <img class="carousel-img" src="{{ image.src | relative_url }}">
+      <div class="carousel-txt">{{ image.caption }}</div>
+    </div>
+    {% endfor %}
+    <span class="carousel-prev" onclick="change_slide(this, -1, true)">&#10094;</span>
+    <span class="carousel-next" onclick="change_slide(this, 1, true)">&#10095;</span>
+  </div>
+  <div class="carousel-dots">
+    {% for image in include.images %}
+    <span class="carousel-dot {{ include.id }}-dot
+                 {% if forloop.first == true %}dot-active{% endif %}"
+      onclick="change_slide(this, {{ forloop.index0 }}, false)"></span>
+    {% endfor %}
+  </div>
+</div>
