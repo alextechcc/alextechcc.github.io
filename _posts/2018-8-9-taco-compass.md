@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Making a Compass That Points to the Nearest Taco Restaurant."
+title: "Making a Compass That Points to the Nearest Taco Restaurant"
 album_1:
     -
        src: "/assets/taco_compass/schematic.png" 
