@@ -6,7 +6,7 @@
                 {% if forloop.first == false %}hide{% endif %}">
       <div class="carousel-num-txt">{{ forloop.index }} / {{ include.images | size }}</div>
       <img class="carousel-img" src="{{ image.src | relative_url }}">
-      <div class="carousel-txt">{{ image.caption }}</div>
+      <div class="caption-txt">{{ image.caption }}</div>
     </div>
     {% endfor %}
     <span class="carousel-prev" onclick="change_slide(this, -1, true)">&#10094;</span>

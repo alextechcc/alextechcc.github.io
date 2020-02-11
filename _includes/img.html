@@ -1,6 +1,6 @@
 {%- assign wid = include.width | default: "50%" -%}
 
-<figure class="image_custom" style="{%- if include.float -%} float: right; clear: right; {%- endif -%} width: {{ wid }}; padding: 10px; margin-top:-15px">
+<figure class="image_custom" style="{%- if include.float -%} float: right; clear: right; {%- endif -%} width: {{ wid }}; padding: 10px; margin-top:-15px; margin-bottom: 0">
   <img src="{{ include.url | relative_url }}" alt="{{ include.description }}">
   <figcaption>
     <blockquote>{{ include.description }}</blockquote>

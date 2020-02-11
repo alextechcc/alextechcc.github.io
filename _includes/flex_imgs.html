@@ -1,0 +1,8 @@
+<div class="flex-container" data-current="0" id="{{ include.id }}">
+    {% for image in include.images %}
+      <div class="flex-img-div" >
+        <img src="{{ image.src | relative_url }}">
+        <div class="caption-txt">{{ image.caption }}</div>
+      </div>
+    {% endfor %}
+</div>
